@@ -1,0 +1,127 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #ffcc2a;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background: #222;
+  color: #fff;
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+.controls-bg {
+  position: relative;
+  min-height: 180px;
+  margin: 2rem 0 1rem 0;
+  background-size: cover, contain;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+  transition: background-image 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.controls-bg svg#controls-bg-svg {
+  pointer-events: none;
+  z-index: 0;
+}
+.controls-overlay {
+  background: rgba(255,255,255,0.88);
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+  display: flex;
+  gap: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.controls-overlay input, .controls-overlay select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #aaa;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 0 2rem;
+}
+.card {
+  background: #fffbe7;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+  position: relative;
+}
+.card:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+.card-field-icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  background: rgba(255,255,255,0.85);
+  border-radius: 50%;
+  padding: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+}
+.card-field-icon img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  display: block;
+}
+.card-content {
+  padding: 1rem;
+  flex: 1;
+}
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0 0 0.5rem 0;
+}
+.card-desc {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+.card-date {
+  font-size: 0.9rem;
+  color: #888;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.pagination button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  background: #222;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.pagination button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
